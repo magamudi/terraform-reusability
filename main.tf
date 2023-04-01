@@ -1,8 +1,15 @@
+variable "group_counts" {
+  type    = map
+  default = {
+    "group1" = 1
+    "group2" = 3
+  }
+}
+
 module "groups" {
-  source = "./modules/droplet-lb"
+  source   = "./modules/droplet-lb"
+  for_each = var.group_counts
 
-  count  = 3
-
-  droplet_count = 3
-  group_name    = "group1-${count.index}"
+  droplet_count = each.value
+  group_name    = each.key
 }
