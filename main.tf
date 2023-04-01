@@ -1,14 +1,8 @@
-module "groups_renamed" {
+module "groups" {
   source = "./modules/droplet-lb"
 
-  droplet_count = 3
-  group_name    = "group1"
-}
+  count  = 3
 
-output "loadbalancer-ip" {
-  value = module.groups_renamed.lb_ip
-}
-moved {
-  from = module.groups
-  to   = module.groups_renamed
+  droplet_count = 3
+  group_name    = "group1-${count.index}"
 }
