@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"dns","Source":"../../modules/dns-records","Dir":"../../modules/dns-records"},{"Key":"droplets","Source":"../../modules/droplet-lb","Dir":"../../modules/droplet-lb"}]}

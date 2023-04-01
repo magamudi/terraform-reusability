@@ -1,0 +1,21 @@
+terraform-reusability/
+├─ environments/
+│  ├─ dev/
+│  │  ├─ main.tf
+│  │  ├─ provider.tf
+│  ├─ prod/
+│  │  ├─ main.tf
+│  │  ├─ provider.tf
+├─ modules/
+│  ├─ dns-records/
+│  │  ├─ outputs.tf
+│  │  ├─ provider.tf
+│  │  ├─ records.tf
+│  │  ├─ variables.tf
+│  ├─ droplet-lb/
+│  │  ├─ droplets.tf
+│  │  ├─ lb.tf
+│  │  ├─ outputs.tf
+│  │  ├─ provider.tf
+│  │  ├─ variables.tf
+├─ provider.tf
